@@ -17,7 +17,7 @@ const FullForm = () => {
     })
 
     window.MktoForms2.getForm(process.env.NEXT_PUBLIC_FULL_FORM_ID)
-      .vals({ FirstName: firstName, LastName: lastName, Company_Name__c: company, Email: email })
+      .vals({ FirstName: firstName, LastName: lastName, Company_Name: company, Email: email })
       .onSuccess(() => {
         dispatch({
           type: 'success'
