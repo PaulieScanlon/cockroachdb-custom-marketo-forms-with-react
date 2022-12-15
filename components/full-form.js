@@ -15,6 +15,10 @@ const FullForm = () => {
     dispatch({
       type: 'isSubmitting'
     })
+    console.log('FirstName: ', firstName)
+    console.log('LastName: ', lastName)
+    console.log('Company_Name__c: ', company)
+    console.log('Email: ', email)
 
     window.MktoForms2.getForm(process.env.NEXT_PUBLIC_FULL_FORM_ID)
       .vals({ FirstName: firstName, LastName: lastName, Company_Name__c: company, Email: email })
