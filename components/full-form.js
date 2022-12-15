@@ -4,7 +4,7 @@ import { initalState, reducer } from '../hooks/use-reducer'
 
 const FullForm = () => {
   const [firstName, setFirstName] = useState('')
-  const [LastName, setLastName] = useState('')
+  const [lastName, setLastName] = useState('')
   const [company, setCompany] = useState('')
   const [email, setEmail] = useState('')
   const [state, dispatch] = useReducer(reducer, initalState)
@@ -17,7 +17,7 @@ const FullForm = () => {
     })
 
     window.MktoForms2.getForm(process.env.NEXT_PUBLIC_FULL_FORM_ID)
-      .vals({ FirstName: firstName, LastName: lastName, Company_Name: company, Email: email })
+      .vals({ FirstName: firstName, LastName: lastName, Company_Name__c: company, Email: email })
       .onSuccess(() => {
         dispatch({
           type: 'success'
@@ -65,7 +65,7 @@ const FullForm = () => {
               type="text"
               required
               placeholder="Doe"
-              value={LastName}
+              value={lastName}
               onChange={(e) => {
                 setLastName(e.target.value)
               }}
