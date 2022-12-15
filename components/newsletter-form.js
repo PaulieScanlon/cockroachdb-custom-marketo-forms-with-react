@@ -1,31 +1,6 @@
 import React, { useState, useReducer, Fragment } from 'react'
 
-const initalState = {
-  isSubmitting: false,
-  success: false
-}
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'isSubmitting': {
-      return {
-        ...state,
-        isSubmitting: true,
-        success: false
-      }
-    }
-    case 'success': {
-      return {
-        ...state,
-        isSubmitting: false,
-        success: true
-      }
-    }
-    default: {
-      throw new Error(`Unhandled action type: ${action.type}`)
-    }
-  }
-}
+import { initalState, reducer } from '../hooks/use-reducer'
 
 const NewsletterForm = () => {
   const [email, setEmail] = useState('')
@@ -48,22 +23,24 @@ const NewsletterForm = () => {
         return false
       })
       .submit()
-    // .showErrorMessage(null, null)
   }
+
+  // console.log('NEWSLETTER: ', window.MktoForms2.getForm(process.env.NEXT_PUBLIC_NEWSLETTER_FORM_ID).getValues())
 
   return (
     <Fragment>
-      <h2>Email only / Newsletter signup form</h2>
-      <div className="bg-white rounded border border-brand-gray-b p-8">
+      <h2 className="m-0">Newsletter Form</h2>
+      <p>Example form used to capture email addresses only.</p>
+      <div className="bg-white rounded border border-brand-gray-b p-8 sm:px-16 pt-16">
         <h3 className="m-0 font-bold text-brand-deep-purple">Signup to Our Newsletter</h3>
-        <small className="block mb-4 text-brand-gray">* Required fields</small>
-        <form onSubmit={handleSubmit} className="flex flex-col">
-          <label className="flex flex-col gap-1">
-            <span className="flex items-center gap-1 font-bold text-brand-deep-purple">
-              Email<span className="text-brand-danger h-6">*</span>
+        <small className="block mb-8 text-brand-gray">* Required fields</small>
+        <form onSubmit={handleSubmit} className="form">
+          <label className="form--label">
+            <span className="form--label-text">
+              Email<span className="form--label-required">*</span>
             </span>
             <input
-              className="px-4 py-2 border-b border-b-brand-deep-purple font-normal text-brand-gray"
+              className="form--input"
               type="email"
               required
               placeholder="you@example.xyz"
@@ -73,18 +50,25 @@ const NewsletterForm = () => {
               }}
             />
           </label>
-          <span className="block h-[40px] py-2 font-bold text-sm ">
+          <span className="form--announce-container">
             {state.isSubmitting ? <span className="text-brand-orange">Submitting...</span> : null}
-            {state.success ? <span className="text-brand-success">Thanks for signing up.</span> : null}
+            {state.success ? <span className="form--announce-success">Thanks for signing up.</span> : null}
           </span>
-          <button
-            type="submit"
-            className="mt-4 px-4 py-3 rounded font-medium text-white bg-brand-electric-purple sm:self-start disabled:bg-brand-neutral-400 disabled:cursor-not-allowed"
-            disabled={state.isSubmitting}
-          >
+          <button type="submit" className="form--button-submit" disabled={state.isSubmitting}>
             Subscribe
           </button>
         </form>
+        <small className="preferences--cta">
+          To update your email preferences visit{' '}
+          <a
+            href="  https://www.cockroachlabs.com/email-preferences/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-brand-deep-purple"
+          >
+            cockroachlabs.com
+          </a>
+        </small>
       </div>
     </Fragment>
   )

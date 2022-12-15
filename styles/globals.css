@@ -7,4 +7,34 @@
   body {
     @apply antialiased;
   }
+  .form {
+    @apply flex flex-col mb-4;
+  }
+  .form--label {
+    @apply flex flex-col gap-1;
+  }
+  .form--label-text {
+    @apply flex items-center gap-1 font-bold !text-brand-deep-purple;
+  }
+  .form--label-required {
+    @apply h-6 !text-brand-danger;
+  }
+  .form--input {
+    @apply p-2 border-b border-b-brand-deep-purple font-normal !text-brand-gray;
+  }
+  .form--announce-container {
+    @apply block h-[40px] py-2 font-bold text-sm;
+  }
+  .form--announce-submitting {
+    @apply text-brand-orange;
+  }
+  .form--announce-success {
+    @apply text-brand-success;
+  }
+  .form--button-submit {
+    @apply mt-4 px-4 py-3 rounded font-medium text-white bg-brand-electric-purple sm:self-start disabled:bg-brand-neutral-400 disabled:cursor-not-allowed;
+  }
+  .preferences--cta {
+    @apply text-center sm:text-left !text-brand-deep-purple;
+  }
 }
