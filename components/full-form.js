@@ -26,8 +26,8 @@ const FullForm = () => {
         dispatch({
           type: 'success'
         })
-        setFristName('')
-        seLastName('')
+        setFirstName('')
+        setLastName('')
         setCompany('')
         setEmail('')
         return false
