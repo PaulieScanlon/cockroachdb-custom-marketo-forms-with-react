@@ -21,10 +21,10 @@ const Page = () => {
           </a>
         </p>
       </div>
-      {/* <div>
+      <div>
         <MarketoForm debug={false} formId={process.env.NEXT_PUBLIC_NEWSLETTER_FORM_ID} />
         <NewsletterForm />
-      </div> */}
+      </div>
       <div>
         <MarketoForm debug={false} formId={process.env.NEXT_PUBLIC_FULL_FORM_ID} />
         <FullForm />
