@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 const GitHubLogo = ({ className }) => {
   return (
-    <>
+    <Fragment>
       <span className="sr-only">GitHub Logo</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const GitHubLogo = ({ className }) => {
           />
         </g>
       </svg>
-    </>
+    </Fragment>
   )
 }
 
