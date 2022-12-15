@@ -26,10 +26,10 @@
     @apply block h-[40px] py-2 font-bold text-sm;
   }
   .form--announce-submitting {
-    @apply text-brand-orange;
+    @apply !text-brand-orange;
   }
   .form--announce-success {
-    @apply text-brand-success;
+    @apply !text-brand-success;
   }
   .form--button-submit {
     @apply mt-4 px-4 py-3 rounded font-medium text-white bg-brand-electric-purple sm:self-start disabled:bg-brand-neutral-400 disabled:cursor-not-allowed;
