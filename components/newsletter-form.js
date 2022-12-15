@@ -29,7 +29,7 @@ const NewsletterForm = () => {
 
   return (
     <Fragment>
-      <h2 className="m-0">Newsletter Form</h2>
+      <h3 className="m-0">Newsletter Form</h3>
       <p>Example form used to capture email addresses only.</p>
       <div className="bg-white rounded border border-brand-gray-b p-8 sm:px-16 pt-16">
         <h3 className="m-0 font-bold text-brand-deep-purple">Signup to Our Newsletter</h3>
@@ -61,7 +61,7 @@ const NewsletterForm = () => {
         <small className="preferences--cta">
           To update your email preferences visit{' '}
           <a
-            href="  https://www.cockroachlabs.com/email-preferences/"
+            href="https://www.cockroachlabs.com/email-preferences/"
             target="_blank"
             rel="noreferrer"
             className="text-brand-deep-purple"

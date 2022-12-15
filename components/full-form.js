@@ -35,7 +35,7 @@ const FullForm = () => {
 
   return (
     <Fragment>
-      <h2 className="m-0">Full Form</h2>
+      <h3 className="m-0">Full Form</h3>
       <p>Example form used to capture more detailed user information.</p>
       <div className="bg-white rounded border border-brand-gray-b p-8 sm:px-16 pt-16">
         <h3 className="m-0 font-bold text-brand-deep-purple">Request More Information From Our Sales Team</h3>
@@ -114,7 +114,7 @@ const FullForm = () => {
         <small className="preferences--cta">
           To update your email preferences visit{' '}
           <a
-            href="  https://www.cockroachlabs.com/email-preferences/"
+            href="https://www.cockroachlabs.com/email-preferences/"
             target="_blank"
             rel="noreferrer"
             className="text-brand-deep-purple"
