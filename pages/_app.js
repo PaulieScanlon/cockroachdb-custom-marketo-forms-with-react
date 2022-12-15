@@ -53,7 +53,7 @@ const App = ({ Component, pageProps }) => {
           </a>
         </nav>
       </header>
-      <main className="prose px-4 py-32 max-w-full min-h-screen">
+      <main className="prose px-4 py-48 max-w-full min-h-screen">
         <Component {...pageProps} />
       </main>
     </Fragment>
