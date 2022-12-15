@@ -1,5 +1,7 @@
 import { Fragment } from 'react'
+
 import CockroachLabsLogo from '../components/cockroach-labs-logo'
+import GitHubLogo from '../components/github-logo'
 
 import '../styles/globals.css'
 
@@ -7,9 +9,12 @@ const App = ({ Component, pageProps }) => {
   return (
     <Fragment>
       <header className="fixed bg-white w-full px-4 py-4 shadow">
-        <nav>
+        <nav className="flex items-center justify-between">
           <a href="https://www.cockroachlabs.com/" target="_blank" rel="noreferrer">
             <CockroachLabsLogo />
+          </a>
+          <a href="https://github.com/PaulieScanlon/cockroachdb-marketo-test-forms/" target="_blank" rel="noreferrer">
+            <GitHubLogo />
           </a>
         </nav>
       </header>

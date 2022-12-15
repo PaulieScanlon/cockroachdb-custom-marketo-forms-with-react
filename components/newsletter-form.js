@@ -53,8 +53,10 @@ const NewsletterForm = () => {
 
   return (
     <Fragment>
-      <h2>Subscribe to Our Newsletter</h2>
+      <h2>Email only / Newsletter signup form</h2>
       <div className="bg-white rounded border border-brand-gray-b p-8">
+        <h3 className="m-0 font-bold text-brand-deep-purple">Signup to Our Newsletter</h3>
+        <small className="block mb-4 text-brand-gray">* Required fields</small>
         <form onSubmit={handleSubmit} className="flex flex-col">
           <label className="flex flex-col gap-1">
             <span className="flex items-center gap-1 font-bold text-brand-deep-purple">
