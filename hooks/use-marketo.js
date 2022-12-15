@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react'
 
-const baseUrl = `//${process.env.NEXT_PUBLIC_BASE_URL}`
-const munchkinId = process.env.NEXT_PUBLIC_MUNCHKIN_ID
-
 const loadMarketoScript = (setScriptLoaded) => {
   if (window.MktoForms2) return setScriptLoaded(true)
 
@@ -20,7 +17,12 @@ const useMarketo = ({ formId, callback }) => {
   useEffect(() => {
     if (scriptLoaded) {
       if (!formLoaded) {
-        MktoForms2.loadForm(baseUrl, munchkinId, formId, callback)
+        MktoForms2.loadForm(
+          `//${process.env.NEXT_PUBLIC_BASE_URL}`,
+          process.env.NEXT_PUBLIC_MUNCHKIN_ID,
+          formId,
+          callback
+        )
         setFormLoaded(true)
       }
     } else {
