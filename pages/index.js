@@ -16,8 +16,13 @@ const Page = () => {
         </h2>
         <p className="text-center">
           You can read more about how these forms work on:{' '}
-          <a href="https://" target="_blank" rel="noreferrer" className="text-brand-iridescent-blue">
-            https://
+          <a
+            href="https://www.cockroachlabs.com/blog/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-brand-iridescent-blue"
+          >
+            cockroachlabs.com/blog/title-of-post
           </a>
         </p>
       </div>
