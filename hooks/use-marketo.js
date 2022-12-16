@@ -17,13 +17,12 @@ const useMarketo = ({ formId, callback }) => {
           const formElement = form.getFormElem()[0]
           const formElementId = form.getFormElem()[0].id.split('_')[1]
 
-          /** Remove the style attribute and make for and id attributes unique */
+          /** Remove the style attribute and make for, and id attributes unique */
           Array.from(formElement.querySelectorAll('[style]'))
             .concat(formElement)
             .forEach((element) => {
               element.removeAttribute('style')
               if (element.hasAttribute('id') && element.tagName !== 'FORM') {
-                // console.log(element.getAttribute('id'))
                 element.setAttribute('id', `${element.getAttribute('id')}_${formElementId}`)
               }
 
