@@ -42,13 +42,13 @@ const Page = () => {
         </div>
       </div>
       <div>
-        <MarketoForm debug={false} formId={process.env.NEXT_PUBLIC_NEWSLETTER_FORM_ID} />
+        <MarketoForm debug={true} formId={process.env.NEXT_PUBLIC_NEWSLETTER_FORM_ID} />
         <NewsletterForm />
       </div>
-      <div>
-        <MarketoForm debug={false} formId={process.env.NEXT_PUBLIC_FULL_FORM_ID} />
+      {/* <div>
+        <MarketoForm debug={true} formId={process.env.NEXT_PUBLIC_FULL_FORM_ID} />
         <FullForm />
-      </div>
+      </div> */}
     </section>
   )
 }
