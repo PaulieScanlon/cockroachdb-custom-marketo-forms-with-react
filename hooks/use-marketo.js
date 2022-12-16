@@ -32,16 +32,22 @@ const useMarketo = ({ formId, callback }) => {
             .concat(formElement)
             .forEach((element) => {
               element.removeAttribute('style')
-              if (element.tagName === 'LABEL') {
-                element.setAttribute('for', `${element.getAttribute('for')}_${formElementId}`)
+              if (element.hasAttribute('id') && element.tagName !== 'FORM') {
+                // console.log(element.getAttribute('id'))
                 element.setAttribute('id', `${element.getAttribute('id')}_${formElementId}`)
               }
-              if (element.tagName === 'INPUT') {
-                element.setAttribute('id', `${element.getAttribute('id')}_${formElementId}`)
+
+              if (element.tagName === 'LABEL') {
+                element.setAttribute('for', `${element.getAttribute('for')}_${formElementId}`)
               }
             })
 
-          /** remove <style /> from DOM */
+          /** Remove <span /> from DOM */
+          Array.from(formElement.querySelectorAll('.mktoInstruction')).forEach((element) => {
+            element.remove()
+          })
+
+          /** Remove <style /> from DOM */
           Array.from(formElement.children).forEach((element) => {
             if (element.type && element.type === 'text/css') {
               element.remove()
