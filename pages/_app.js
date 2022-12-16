@@ -43,7 +43,7 @@ const App = ({ Component, pageProps }) => {
         <link rel="icon" type="image/png" sizes="16x16" href={`${cdnUrl}/favicon-16x16.png`} data-react-helmet="true" />
         <link rel="icon" type="image/png" sizes="32x32" href={`${cdnUrl}/favicon-32x32.png`} data-react-helmet="true" />
       </Head>
-      <header className="fixed bg-white w-full px-4 py-4 sm:py-6 shadow-lg">
+      <header className="fixed bg-white w-full p-4 shadow-lg">
         <nav className="mx-auto max-w-7xl flex items-center justify-between">
           <a href="https://www.cockroachlabs.com/" target="_blank" rel="noreferrer">
             <CockroachLabsLogo />
