@@ -64,7 +64,7 @@ const NewsletterForm = () => {
             href="https://www.cockroachlabs.com/email-preferences/"
             target="_blank"
             rel="noreferrer"
-            className="text-brand-deep-purple"
+            className="text-brand-deep-purple hover:!text-brand-primary"
           >
             cockroachlabs.com
           </a>
