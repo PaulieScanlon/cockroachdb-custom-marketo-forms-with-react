@@ -19,6 +19,7 @@ const App = ({ Component, pageProps }) => {
       <Head>
         <title>{seoTitle}</title>
         <link rel="canonical" href={proxyUrl} />
+        <meta name="robots" content="max-snippet:-1" />
 
         {/* Primary Meta Tags */}
         <meta name="title" content={seoTitle} />
