@@ -1,23 +1,5 @@
 import { useState, useEffect } from 'react'
 
-const removeFormStyles = (form) => {
-  const formElem = form.getFormElem()[0]
-  // formElem.removeAttribute('style')
-  console.log(formElem.children)
-
-  Array.from(formElem.children).forEach((element) => {
-    console.log(element.type)
-    if (element.type && element.type === 'text/css') {
-      element.remove()
-    }
-  })
-  // formElem.querySelectorAll('[style]').forEach((element) => {
-  //   // element.removeAttribute('style')
-  //   // element.removeAttribute('class')
-  //   console.log(element)
-  // })
-}
-
 const addScriptToDom = (setScriptAdded) => {
   if (window.MktoForms2) return setScriptAdded(true)
 
@@ -41,7 +23,20 @@ const useMarketo = ({ formId, callback }) => {
           formId,
           callback
         )
-        MktoForms2.whenRendered((form) => removeFormStyles(form))
+        MktoForms2.whenRendered((form) => {
+          const formElement = form.getFormElem()[0]
+          Array.from(formElement.querySelectorAll('[style]'))
+            .concat(formElement)
+            .forEach((element) => {
+              element.removeAttribute('style')
+            })
+
+          Array.from(formElement.children).forEach((element) => {
+            if (element.type && element.type === 'text/css') {
+              element.remove()
+            }
+          })
+        })
         setFormLoaded(true)
       }
     } else {
