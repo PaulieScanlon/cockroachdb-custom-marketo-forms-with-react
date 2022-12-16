@@ -32,7 +32,7 @@
     @apply !text-brand-success;
   }
   .form--button-submit {
-    @apply mt-4 px-4 py-3 rounded font-medium text-white bg-brand-electric-purple sm:self-start disabled:bg-brand-neutral-400 disabled:cursor-not-allowed;
+    @apply mt-4 px-8 py-3 rounded-full font-medium text-white bg-brand-electric-purple sm:self-start duration-300 hover:brightness-110 disabled:bg-brand-neutral-400 disabled:cursor-not-allowed;
   }
   .preferences--cta {
     @apply text-center sm:text-left !text-brand-deep-purple;

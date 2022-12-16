@@ -107,7 +107,7 @@ const FullForm = () => {
               <span className="form--announce-success">Thanks. Someone will be in touch shorly.</span>
             ) : null}
           </span>
-          <button type="submit" className="form--button-submit" disabled={state.isSubmitting}>
+          <button type="submit" className="trainsition-all form--button-submit" disabled={state.isSubmitting}>
             Submit
           </button>
         </form>
