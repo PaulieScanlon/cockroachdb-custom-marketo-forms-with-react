@@ -9,7 +9,7 @@ const GitHubLogo = ({ className }) => {
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
         viewBox="0 0 24 24"
-        className={`w-6 h-6 text-brand-deep-purple ${className}`}
+        className={`w-7 h-7 text-brand-deep-purple ${className}`}
       >
         <g>
           <path
