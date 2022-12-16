@@ -9,7 +9,7 @@ import '../styles/globals.css'
 const App = ({ Component, pageProps }) => {
   const cdnUrl = process.env.NEXT_PUBLIC_CDN_URL
   const proxyUrl = process.env.NEXT_PUBLIC_PROXY_URL
-  const seoTitle = 'Custom Marketo Forms With Next.js'
+  const seoTitle = 'Custom Marketo Forms With React'
   const seoDescription =
     'Create custom Marketo forms that submit data straight to your companies main lead capture database!'
   const seoImage = 'open-graph-image.jpg'
