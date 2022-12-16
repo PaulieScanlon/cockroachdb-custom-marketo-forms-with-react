@@ -1,15 +1,5 @@
 import { useState, useEffect } from 'react'
 
-const addScriptToDom = (setScriptAdded) => {
-  if (window.MktoForms2) return setScriptAdded(true)
-
-  const script = document.createElement('script')
-  script.defer = true
-  script.onload = () => (window?.MktoForms2 ? setScriptAdded(true) : null)
-  script.src = `//${process.env.NEXT_PUBLIC_BASE_URL}/js/forms2/js/forms2.min.js`
-  document.head.appendChild(script)
-}
-
 const useMarketo = ({ formId, callback }) => {
   const [scriptAdded, setScriptAdded] = useState(false)
   const [formLoaded, setFormLoaded] = useState(false)
@@ -57,7 +47,15 @@ const useMarketo = ({ formId, callback }) => {
         setFormLoaded(true)
       }
     } else {
-      addScriptToDom(setScriptAdded)
+      if (window.MktoForms2) {
+        setScriptAdded(true)
+      } else {
+        const script = document.createElement('script')
+        script.defer = true
+        script.onload = () => (window?.MktoForms2 ? setScriptAdded(true) : null)
+        script.src = `//${process.env.NEXT_PUBLIC_BASE_URL}/js/forms2/js/forms2.min.js`
+        document.head.appendChild(script)
+      }
     }
   }, [scriptAdded])
 }
