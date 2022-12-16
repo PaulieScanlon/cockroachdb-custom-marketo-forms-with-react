@@ -25,12 +25,20 @@ const useMarketo = ({ formId, callback }) => {
         )
         MktoForms2.whenRendered((form) => {
           const formElement = form.getFormElem()[0]
+          /** Remove the style attribute and make for and id attributes unique */
           Array.from(formElement.querySelectorAll('[style]'))
             .concat(formElement)
             .forEach((element) => {
               element.removeAttribute('style')
+              if (element.tagName === 'LABEL') {
+                element.setAttribute('for', `${element.getAttribute('for')}_${formId}`)
+                element.setAttribute('id', `${element.getAttribute('id')}_${formId}`)
+              }
+              if (element.tagName === 'INPUT') {
+                element.setAttribute('id', `${element.getAttribute('id')}_${formId}`)
+              }
             })
-
+          /** remove <style /> from DOM */
           Array.from(formElement.children).forEach((element) => {
             if (element.type && element.type === 'text/css') {
               element.remove()
