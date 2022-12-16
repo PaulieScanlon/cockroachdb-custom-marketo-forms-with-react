@@ -15,7 +15,7 @@ const MarketoForm = ({ debug, formId }) => {
     <form
       id={`mktoForm_${formId}`}
       className={debug ? 'w-full outline outline-brand-danger p-4 bg-brand-deep-purple' : 'hidden'}
-      aria-hidden="true"
+      // aria-hidden="true"
     />
   )
 }
