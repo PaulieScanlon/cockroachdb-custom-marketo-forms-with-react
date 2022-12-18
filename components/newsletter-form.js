@@ -52,7 +52,7 @@ const NewsletterForm = () => {
             {state.isSubmitting ? <span className="text-brand-orange">Submitting...</span> : null}
             {state.success ? <span className="form--announce-success">Thanks for signing up.</span> : null}
           </span>
-          <button type="submit" className="trainsition-all form--button-submit" disabled={state.isSubmitting}>
+          <button type="submit" className="transition-all form--button-submit" disabled={state.isSubmitting}>
             Subscribe
           </button>
         </form>
