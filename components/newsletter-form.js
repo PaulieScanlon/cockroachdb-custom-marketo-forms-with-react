@@ -1,10 +1,10 @@
 import React, { useState, useReducer, Fragment } from 'react'
 
-import { initalState, reducer } from '../hooks/use-reducer'
+import { initialState, reducer } from '../hooks/use-reducer'
 
 const NewsletterForm = () => {
   const [email, setEmail] = useState('')
-  const [state, dispatch] = useReducer(reducer, initalState)
+  const [state, dispatch] = useReducer(reducer, initialState)
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -24,8 +24,6 @@ const NewsletterForm = () => {
       })
       .submit()
   }
-
-  // console.log('NEWSLETTER: ', window.MktoForms2.getForm(process.env.NEXT_PUBLIC_NEWSLETTER_FORM_ID).getValues())
 
   return (
     <Fragment>

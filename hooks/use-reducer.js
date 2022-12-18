@@ -1,4 +1,4 @@
-export const initalState = {
+export const initialState = {
   isSubmitting: false,
   success: false
 }
