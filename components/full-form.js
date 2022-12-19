@@ -108,7 +108,7 @@ const FullForm = () => {
             ) : null}
           </span>
           <button type="submit" className="trainsition-all form--button-submit" disabled={state.isSubmitting}>
-            Submit
+            {state.isSubmitting ? 'Please wait...' : 'Submit'}
           </button>
         </form>
         <small className="preferences--cta">

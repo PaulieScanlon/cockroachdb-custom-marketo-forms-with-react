@@ -32,7 +32,7 @@ GitHubLogo.defaultProps = {
 }
 
 GitHubLogo.propTypes = {
-  /** CSS classes toapply  */
+  /** CSS classes to apply  */
   className: PropTypes.string
 }
 

@@ -53,7 +53,7 @@ const NewsletterForm = () => {
             {state.success ? <span className="form--announce-success">Thanks for signing up.</span> : null}
           </span>
           <button type="submit" className="transition-all form--button-submit" disabled={state.isSubmitting}>
-            Subscribe
+            {state.isSubmitting ? 'Please wait...' : 'Subscribe'}
           </button>
         </form>
         <small className="preferences--cta">

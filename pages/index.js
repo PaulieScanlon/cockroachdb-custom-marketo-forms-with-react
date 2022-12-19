@@ -33,7 +33,7 @@ const Page = () => {
               href="https://www.cockroachlabs.com/blog/"
               target="_blank"
               rel="noreferrer"
-              className="flex gap-2 items-center justify-center font-bold text-white px-8 py-3 rounded-full bg-brand-primary no-underline trainsition-all duration-300 hover:brightness-110 hover:gap-6"
+              className="flex gap-2 items-center justify-center font-bold text-white px-8 py-3 rounded-full bg-brand-primary no-underline trainsition-all duration-300 hover:brightness-110 hover:gap-4"
             >
               <span>Read Post</span>
               <ArrowRight />
