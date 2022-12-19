@@ -1,13 +1,13 @@
 import React, { useState, useReducer, Fragment } from 'react'
 
-import { initalState, reducer } from '../hooks/use-reducer'
+import { initialState, reducer } from '../hooks/use-reducer'
 
 const FullForm = () => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [company, setCompany] = useState('')
   const [email, setEmail] = useState('')
-  const [state, dispatch] = useReducer(reducer, initalState)
+  const [state, dispatch] = useReducer(reducer, initialState)
 
   const handleSubmit = (event) => {
     event.preventDefault()
