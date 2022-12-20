@@ -43,13 +43,13 @@ const useMarketo = ({ formId, callback }) => {
             }
           })
 
-          /** Remove form theme style from dom */
+          /** Remove form theme style from DOM */
           const themeStyle = document.getElementById('mktoForms2ThemeStyle')
           if (themeStyle) {
             themeStyle.remove()
           }
 
-          /** Remove form base style from dom */
+          /** Remove form base style from DOM */
           const baseStyle = document.getElementById('mktoForms2BaseStyle')
           if (baseStyle) {
             baseStyle.remove()
