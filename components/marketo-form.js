@@ -9,7 +9,7 @@ const MarketoForm = memo(({ debug, formId }) => {
     callback: () => {}
   })
 
-  return <form id={`mktoForm_${formId}`} className={debug ? '' : 'hidden'} aria-hidden="true" />
+  return <form id={`mktoForm_${formId}`} className={debug ? 'bg-brand-deep-purple' : 'hidden'} aria-hidden="true" />
 })
 
 MarketoForm.defaultProps = {
