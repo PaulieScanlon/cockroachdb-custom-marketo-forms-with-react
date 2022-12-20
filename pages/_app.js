@@ -38,7 +38,7 @@ const App = ({ Component, pageProps }) => {
         <meta name="twitter:url" content={proxyUrl} />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDescription} />
-        <meta name="twitter:image" content={`${cdnUrl}${seoImage}`} />
+        <meta name="twitter:image" content={`${cdnUrl}/${seoImage}`} />
 
         {/* favicon */}
         <link rel="icon" type="image/png" sizes="16x16" href={`${cdnUrl}/favicon-16x16.png`} data-react-helmet="true" />
