@@ -105,7 +105,7 @@ const FullForm = ({ formId }) => {
           <span className="form--announce-container">
             {state.isSubmitting ? <span className="form--announce-submitting">Submitting...</span> : null}
             {state.success ? (
-              <span className="form--announce-success">Thanks. Someone will be in touch shorly.</span>
+              <span className="form--announce-success">Thanks. Someone will be in contact soon.</span>
             ) : null}
           </span>
           <button type="submit" className="trainsition-all form--button-submit" disabled={state.isSubmitting}>
