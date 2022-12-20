@@ -54,9 +54,23 @@ const App = ({ Component, pageProps }) => {
           </a>
         </nav>
       </header>
-      <main className="prose px-4 py-48 max-w-full min-h-screen">
+      <main className="prose px-4 pt-32 pb-16 sm:pt-48 sm:pb-24 max-w-full min-h-screen">
         <Component {...pageProps} />
       </main>
+      <footer className="bg-black">
+        <ul className="mx-auto max-w-7xl flex items-center justify-between p-4 text-sm font-bold text-white">
+          <li>
+            <a href="https://twitter.com/CockroachDB/" target="_blank" rel="noreferrer">
+              @CockroachDB
+            </a>
+          </li>
+          <li>
+            <a href="https://www.cockroachlabs.com/privacy/" target="_blank" rel="noreferrer">
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </footer>
     </Fragment>
   )
 }
