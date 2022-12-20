@@ -11,7 +11,7 @@ const App = ({ Component, pageProps }) => {
   const proxyUrl = process.env.NEXT_PUBLIC_PROXY_URL
   const seoTitle = 'Custom Marketo Forms With React'
   const seoDescription =
-    'Create custom Marketo forms that submit data straight to your companies main lead capture database!'
+    'Create custom Marketo forms that still submit data straight to your companies main lead capture database!'
   const seoImage = 'open-graph-image.jpg'
 
   return (

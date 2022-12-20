@@ -13,7 +13,7 @@ const Page = () => {
         </h1>
         <div className="mx-auto max-w-3xl">
           <h2 className="text-center">
-            Create custom Marketo forms that submit data straight to your companies main lead capture database!
+            Create custom Marketo forms that still submit data straight to your companies main lead capture database!
           </h2>
           <p className="text-center font-mono font-medium text-sm sm:text-base">
             /* You can read more about how these forms work on the{' '}
