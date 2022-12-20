@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
 import useMarketo from '../hooks/use-marketo'
 
-const MarketoForm = ({ debug, formId }) => {
+const MarketoForm = memo(({ debug, formId }) => {
   useMarketo({
     formId: formId,
     callback: () => {}
   })
 
   return <form id={`mktoForm_${formId}`} className={debug ? '' : 'hidden'} aria-hidden="true" />
-}
+})
 
 MarketoForm.defaultProps = {
   debug: false

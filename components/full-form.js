@@ -1,8 +1,11 @@
 import React, { useState, useReducer, Fragment } from 'react'
+import PropTypes from 'prop-types'
 
 import { initialState, reducer } from '../hooks/use-reducer'
 
-const FullForm = () => {
+import MarketoForm from './marketo-form'
+
+const FullForm = ({ formId }) => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [company, setCompany] = useState('')
@@ -16,7 +19,7 @@ const FullForm = () => {
       type: 'isSubmitting'
     })
 
-    window.MktoForms2.getForm(process.env.NEXT_PUBLIC_FULL_FORM_ID)
+    window.MktoForms2.getForm(formId)
       .vals({ FirstName: firstName, LastName: lastName, Company_Name__c: company, Email: email })
       .onSuccess(() => {
         dispatch({
@@ -30,8 +33,6 @@ const FullForm = () => {
       })
       .submit()
   }
-
-  // console.log('FULL_FORM: ', window.MktoForms2.getForm(process.env.NEXT_PUBLIC_FULL_FORM_ID).getValues())
 
   return (
     <Fragment>
@@ -122,9 +123,15 @@ const FullForm = () => {
             cockroachlabs.com
           </a>
         </small>
+        <MarketoForm debug={false} formId={formId} />
       </div>
     </Fragment>
   )
+}
+
+FullForm.propTypes = {
+  /** The Marketo Form Id */
+  formId: PropTypes.string.isRequired
 }
 
 export default FullForm

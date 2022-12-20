@@ -1,8 +1,11 @@
 import React, { useState, useReducer, Fragment } from 'react'
+import PropTypes from 'prop-types'
 
 import { initialState, reducer } from '../hooks/use-reducer'
 
-const NewsletterForm = () => {
+import MarketoForm from './marketo-form'
+
+const NewsletterForm = ({ formId }) => {
   const [email, setEmail] = useState('')
   const [state, dispatch] = useReducer(reducer, initialState)
 
@@ -13,7 +16,7 @@ const NewsletterForm = () => {
       type: 'isSubmitting'
     })
 
-    window.MktoForms2.getForm(process.env.NEXT_PUBLIC_NEWSLETTER_FORM_ID)
+    window.MktoForms2.getForm(formId)
       .vals({ Email: email })
       .onSuccess(() => {
         dispatch({
@@ -67,9 +70,15 @@ const NewsletterForm = () => {
             cockroachlabs.com
           </a>
         </small>
+        <MarketoForm debug={false} formId={formId} />
       </div>
     </Fragment>
   )
+}
+
+NewsletterForm.propTypes = {
+  /** The Marketo Form Id */
+  formId: PropTypes.string.isRequired
 }
 
 export default NewsletterForm

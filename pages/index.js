@@ -1,6 +1,5 @@
 import React from 'react'
 
-import MarketoForm from '../components/marketo-form'
 import NewsletterForm from '../components/newsletter-form'
 import FullForm from '../components/full-form'
 import ArrowRight from '../components/arrow-right'
@@ -42,12 +41,10 @@ const Page = () => {
         </div>
       </div>
       <div>
-        <MarketoForm debug={false} formId={process.env.NEXT_PUBLIC_NEWSLETTER_FORM_ID} />
-        <NewsletterForm />
+        <NewsletterForm formId={process.env.NEXT_PUBLIC_NEWSLETTER_FORM_ID} />
       </div>
       <div>
-        <MarketoForm debug={false} formId={process.env.NEXT_PUBLIC_FULL_FORM_ID} />
-        <FullForm />
+        <FullForm formId={process.env.NEXT_PUBLIC_FULL_FORM_ID} />
       </div>
     </section>
   )
