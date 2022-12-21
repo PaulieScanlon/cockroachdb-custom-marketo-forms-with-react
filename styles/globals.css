@@ -20,7 +20,7 @@
     @apply h-6 !text-brand-danger;
   }
   .form--input {
-    @apply p-2 border-b border-b-brand-deep-purple font-normal !text-brand-gray;
+    @apply p-2 rounded-none border-b border-b-brand-deep-purple font-normal !text-brand-gray;
   }
   .form--announce-container {
     @apply block h-[40px] py-2 font-bold text-sm;
@@ -36,5 +36,10 @@
   }
   .preferences--cta {
     @apply block text-center sm:text-left !text-brand-deep-purple;
+  }
+  a:focus,
+  input:focus,
+  button:focus {
+    @apply border-transparent outline outline-4 outline-brand-focus;
   }
 }

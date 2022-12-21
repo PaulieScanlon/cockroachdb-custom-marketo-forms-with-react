@@ -43,7 +43,8 @@ module.exports = {
           'narwhal-grey': '#060c12',
           'evening-hush': '#7e89a9',
           'chaos-black': '#101010',
-          'not-tonight': '#0b0717'
+          'not-tonight': '#0b0717',
+          focus: '#c7b3ff'
         }
       },
       typography: (theme) => ({
