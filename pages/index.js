@@ -16,20 +16,20 @@ const Page = () => {
             Create custom Marketo forms that still submit data straight to your companies main lead capture database!
           </h2>
           <p className="text-center font-mono font-medium text-sm sm:text-base">
-            /* You can read more about how these forms work on the{' '}
+            /* You can read more about how these forms work on{' '}
             <a
-              href="https://www.cockroachlabs.com/blog/"
+              href="https://paulie.dev/posts/2022/12/how-to-create-custom-marketo-forms-with-react/"
               target="_blank"
               rel="noreferrer"
               className="text-brand-iridescent-blue whitespace-nowrap"
             >
-              Cockroach Labs Blog
+              paulie.dev
             </a>{' '}
             */
           </p>
           <div className="flex justify-center py-4">
             <a
-              href="https://www.cockroachlabs.com/blog/"
+              href="https://paulie.dev/posts/2022/12/how-to-create-custom-marketo-forms-with-react/"
               target="_blank"
               rel="noreferrer"
               className="flex gap-2 items-center justify-center font-bold text-white px-8 py-3 rounded-full bg-brand-primary no-underline trainsition-all duration-300 hover:brightness-110 hover:gap-4"
