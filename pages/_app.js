@@ -8,7 +8,6 @@ import '../styles/globals.css'
 
 const App = ({ Component, pageProps }) => {
   const cdnUrl = process.env.NEXT_PUBLIC_CDN_URL
-  const proxyUrl = process.env.NEXT_PUBLIC_PROXY_URL
   const seoTitle = 'Custom Marketo Forms With React'
   const seoDescription =
     'Create custom Marketo forms that still submit data straight to your companies main lead capture database!'
@@ -18,7 +17,7 @@ const App = ({ Component, pageProps }) => {
     <Fragment>
       <Head>
         <title>{seoTitle}</title>
-        <link rel="canonical" href={proxyUrl} />
+        <link rel="canonical" href={cdnUrl} />
         <meta name="robots" content="max-snippet:-1" />
 
         {/* Primary Meta Tags */}
@@ -28,14 +27,14 @@ const App = ({ Component, pageProps }) => {
 
         {/* Open Graph / Facebook  */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={proxyUrl} />
+        <meta property="og:url" content={cdnUrl} />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:image" content={`${cdnUrl}/${seoImage}`} />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={proxyUrl} />
+        <meta name="twitter:url" content={cdnUrl} />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDescription} />
         <meta name="twitter:image" content={`${cdnUrl}/${seoImage}`} />
